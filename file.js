@@ -11,13 +11,6 @@ let alert = `
   <strong>Hatali giris yaptiniz!</strong>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>`;
-var closebtns = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < closebtns.length; i++) {
-  closebtns[i].addEventListener("click", function () {
-    this.parentElement.style.display = "none";
-  });
-}
 function formHandler(event) {
     event.preventDefault();
     var closebtns = document.getElementsByClassName("close");
