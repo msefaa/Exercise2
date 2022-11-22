@@ -11,6 +11,12 @@ let alert = `
   <strong>Hatali giris yaptiniz!</strong>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>`;
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false );
 function formHandler(event) {
     event.preventDefault();
     var closebtns = document.getElementsByClassName("close");
@@ -36,13 +42,33 @@ function formHandler(event) {
 
 let userlistdom = document.querySelector("#ulList");
 const additems = (items) => {
-  let li = document.createElement("li");
-  li.innerHTML = `${items} <span class="close">X</span>`;
-  li.classList.add(
+  let listItem = document.createElement("li");
+  const link=document.createElement("a")
+  listItem.classList.add(
     "list-group-item",
     "d-flex",
     "justify-content-between",
-    "align-items-center"
+    "align-items-center",
+    "demo",
+    "text-center",
   );
-  userlistdom.append(li);
+  link.href = "#";
+  link.className = "delete-item";
+  link.innerHTML = "<span class = 'close'>X</span>";
+  listItem.appendChild(document.createTextNode(items));
+  listItem.appendChild(link);
+  userlistdom.appendChild(listItem);
 };
+userlistdom.addEventListener("click", deleteTodo);
+function deleteTodo(e) {
+    if (e.target.className === "close") {
+      e.target.parentElement.parentElement.remove();
+      alertDom.innerHTML = alertsuccess;
+    }
+  }
+  const deleteall =document.querySelector(".allclear")
+  deleteall.addEventListener("click", deletee);
+  function deletee (e) {
+        userlistdom.innerHTML = "";
+      }
+    

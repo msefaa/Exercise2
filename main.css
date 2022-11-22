@@ -1,9 +1,20 @@
+body{
+    background-image: url(https://www.gonect.nl/wp-content/uploads/happy.gif);
+}
 .bg-orange{
-background-color:#fa8e00;
+    background-position-x: center;
+background-image: url(https://drhandanyavuz.com/wp-content/uploads/2022/03/saglikli-yasam-1-1.jpg);
+}
+h2{
+    text-decoration: double;
+    text-transform: uppercase;
+    text-shadow: red;
+    color: white;
 }
 img{
-    background-color: white;
-    
+    width: 200px;
+    height:100px;
+    border-radius: 150px;
 }
 .input-group{
 width: auto;
@@ -29,3 +40,26 @@ ul li:hover {
 #alert{
     margin: 0;
 }
+ul li{
+    text-transform: uppercase;
+    user-select: none;
+}
+ul li.checked {
+    background: rgb(150, 240, 6);
+    color: #fff;
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+ul li.checked::before {
+    content: '';
+    position: relative;
+    border-color:green;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    left: 30px;
+    bottom: 4px;
+    transform: rotate(45deg);
+    height: 30px;
+    width: 15px;
+    text-decoration: line-through;
+  }
