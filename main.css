@@ -1,0 +1,31 @@
+.bg-orange{
+background-color:#fa8e00;
+}
+img{
+    background-color: white;
+    
+}
+.input-group{
+width: auto;
+}
+ul li:hover {
+    background-color: #eee;
+  }
+  
+  /* Style the close button (span) */
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 8px 10px;
+    transform: translate(0%, -50%);
+  }
+  
+  .close:hover {
+    background: #bbb;
+    border-radius: 1.2rem;
+}
+#alert{
+    margin: 0;
+}
